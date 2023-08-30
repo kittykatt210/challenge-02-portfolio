@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;   
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    /* Turns this element into a flexbox */
+    display: flex;
+    /* Forces elements to the next line if they don't fit */
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+  
+.main-header {
+    display: flex;
+    /* Defines how to distribute the empty space between child elements */
+    justify-content: space-between;
+    padding: 20px;
+    color: aquamarine;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    background-color: rgb(63, 57, 57);
+}
+
+.main-header nav {
+    padding-top: 35px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    
+}
+
+.main-header nav a {
+    list-style-type: none;
+    color: aquamarine;
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.lego {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/lego_wp_light.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.lego h2 {
+    font-size: 75px;
+    float: right;
+    padding-top: 45px;
+    margin-right: 20px;
+    color: rgb(2, 2, 75);
+}
+
+.content {
+    position: relative;
+    font-size: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    main,
+    nav {
+      flex-direction: column;
+    }
+    /* Make the sidebar stack below the body */
+    aside {
+      order: 2;
+    }
+    /* Change the header background */
+    header {
+      background: #772014;
+    }
+    /* Change the navbar and footer background */
+    nav,
+    footer {
+      background-color: #bb8588;
+    }
+  }
