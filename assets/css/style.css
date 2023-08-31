@@ -137,23 +137,27 @@ footer ul li a{
 
 /* Media screen settings at 992px */
 @media screen and (max-width: 992px) {
+    nav{width: 80%};
     nav a{font-size: 70%;}
     img.one, img.two{width: 50%;}
+    footer ul{padding-left: 0px; text-align: center;}
     footer ul li{margin: 15px;}   
     footer ul li a{font-size: 85%;}
 }
 
 /* Media screen settings at 768px */
 @media screen and (max-width: 768px) {
-    nav a{font-size: 55%;}
+    nav{width: 100%;}
+    nav a{font-size: 70%;}
     .family{height: 300px;}
     img.one, img.two{width: 50%;}
-    footer ul li{margin: 15px;}   
-    footer ul li a{font-size: 60%;}
+    footer ul{flex-direction: column; padding: 0px;}
+    footer ul li{text-align: center; width: 100%;}   
+    footer ul li a{font-size: 100%;}
 }
 
-/* Media screen settings at 560px */
-@media screen and (max-width: 560px) {
+/* Media screen settings at 575px */
+@media screen and (max-width: 575px) {
     body header h1{padding: 20px; text-align: center;}
     nav{width: 100%;}   
     nav a{font-size: 70%;}
