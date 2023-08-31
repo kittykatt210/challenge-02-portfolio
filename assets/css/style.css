@@ -1,3 +1,4 @@
+/* Setting variables for text and background colors as well as the font family used throughout the page */
 :root {
     --text: rgb(2,2,75);
     --me: aquamarine;
@@ -6,11 +7,13 @@
     --content: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/* Univeral setting for the page */
 * {
     box-sizing: border-box;
     margin: 0px;
 }
 
+/* Settings for the body */
 body {
     display: block;
     width: 100%;
@@ -33,11 +36,13 @@ body header h1 {
     padding-top: 20px;
 }
 
+/* Settings for the lego image background */
 .lego {
     background-image: url(../images/lego_wp_light.png);
     height: 75px;
 }
 
+/* Settings for the navigation bar in the header */
 nav {
     display: block;
     width: 50%;
@@ -53,6 +58,7 @@ nav a {
     color: var(--text);
 }
 
+/* Settings for the family photo background */
 .family {
     display: block;
     background-image: url(../images/perryfamily.jpeg);
@@ -61,6 +67,7 @@ nav a {
     background-size: 100% ;
 }
 
+/* Settings for the about me and work content */
 .headings {
     padding-left: 50px;
     padding-top: 20px;
@@ -78,6 +85,7 @@ nav a {
     color: var(--text);
 }
 
+/* Settings for the pictures that are also links to other project pages */
 img.one {
     width: 600px;
     height: 700px;
@@ -104,6 +112,7 @@ span[proj]:hover::after {
     z-index: 1;
 }
 
+/* Settings for the footer that include links to phone, email and GitHub page */
 footer ul {
     display: flex;
     width: 100%;
@@ -126,6 +135,7 @@ footer ul li a{
     color:  var(--text);
 }
 
+/* Media screen settings at 992px */
 @media screen and (max-width: 992px) {
     nav a{font-size: 70%;}
     img.one, img.two{width: 50%;}
@@ -133,7 +143,7 @@ footer ul li a{
     footer ul li a{font-size: 85%;}
 }
 
-/* changes the size of the screen at 768 px */
+/* Media screen settings at 768px */
 @media screen and (max-width: 768px) {
     nav a{font-size: 55%;}
     .family{height: 300px;}
@@ -142,7 +152,7 @@ footer ul li a{
     footer ul li a{font-size: 60%;}
 }
 
-/* changes the size of the screen at 500 px */
+/* Media screen settings at 560px */
 @media screen and (max-width: 560px) {
     body header h1{padding: 20px; text-align: center;}
     nav{width: 100%;}   
