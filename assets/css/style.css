@@ -1,3 +1,11 @@
+:root {
+    --text: rgb(2,2,75);
+    --me: aquamarine;
+    --bkgrd: rgb(219, 246, 237);
+    --toprunner: rgb(63,57,57);
+    --content: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -7,20 +15,20 @@ body {
     display: block;
     width: 100%;
     margin: 0px;
-    background-color: rgb(219, 246, 237);
+    background-color: var(--bkgrd);
 }
 
 body header {
     display: block;
-    color: aquamarine;
-    background-color: rgb(63,57,57);
+    color: var(--me);
+    background-color: var(--toprunner);
     height: 100px;
     
 }
 
 body header h1 {
     font-size: 50px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--content);
     padding-left: 50px;
     padding-top: 20px;
 }
@@ -42,13 +50,15 @@ nav a {
     width: 25%;
     padding-top: 20px;    text-align: center;
     text-decoration: none;
-    color: rgb(2,2,75);
+    color: var(--text);
 }
 
 .family {
     display: block;
     background-image: url(../images/perryfamily.jpeg);
-    height: 300px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: 100% ;
 }
 
 .headings {
@@ -56,15 +66,16 @@ nav a {
     padding-top: 20px;
     width: fit-content;
     font-size: 35px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    font-family: var(--content);   
     border-bottom: 2px solid;
 }
+
 .content {
     padding-left: 40px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--content);
     font-size: 20px;
     line-height: 1.5;
-    color: rgb(2,2,75);
+    color: var(--text);
 }
 
 img.one {
@@ -77,4 +88,68 @@ img.two {
     width: 1000px;
     height: 345px;
     padding: 0px;
+}
+
+span[proj]:hover::after {
+    content: attr(proj);
+    position: fixed;
+    left: 50px;
+    bottom: 200px;
+    min-width: 400px;
+    border: 1px #aaaaaa solid;
+    background-color: var(--text);
+    padding: 12px;
+    color: #fff;
+    font-size: 80%;
+    z-index: 1;
+}
+
+footer ul {
+    display: flex;
+    width: 100%;
+}
+
+footer ul li{
+    margin: 45px;
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    width: 25%;
+}
+
+footer ul li img {
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+footer ul li a{
+    color:  var(--text);
+}
+
+@media screen and (max-width: 992px) {
+    nav a{font-size: 70%;}
+    img.one, img.two{width: 50%;}
+    footer ul li{margin: 15px;}   
+    footer ul li a{font-size: 85%;}
+}
+
+/* changes the size of the screen at 768 px */
+@media screen and (max-width: 768px) {
+    nav a{font-size: 55%;}
+    .family{height: 300px;}
+    img.one, img.two{width: 50%;}
+    footer ul li{margin: 15px;}   
+    footer ul li a{font-size: 60%;}
+}
+
+/* changes the size of the screen at 500 px */
+@media screen and (max-width: 560px) {
+    body header h1{padding: 20px; text-align: center;}
+    nav{width: 100%;}   
+    nav a{font-size: 70%;}
+    .family{height: 300px;}
+    img.one, img.two{width: 50%;}
+    footer ul{flex-direction: column; padding: 0px;}
+    footer ul li{text-align: center; width: 100%;}
+    footer ul li a{font-size: 100%;}
 }
