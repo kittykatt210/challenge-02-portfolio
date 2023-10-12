@@ -1,177 +1,225 @@
 /* Setting variables for text and background colors as well as the font family used throughout the page */
 :root {
-    --text: rgb(2,2,75);
-    --me: aquamarine;
-    --bkgrd: rgb(219, 246, 237);
-    --toprunner: rgb(63,57,57);
-    --content: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    --bd-violet-bg: rgb(62, 4, 121);
-    --bs-white: white;
+  --text: rgb(2, 2, 75);
+  --me: aquamarine;
+  --bkgrd: rgb(219, 246, 237);
+  --toprunner: rgb(63, 57, 57);
+  --content: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --bd-violet-bg: rgb(62, 4, 121);
+  --bs-white: white;
 }
 
 /* Univeral setting for the page */
 * {
-    box-sizing: border-box;
-    margin: 0px;
+  box-sizing: border-box;
+  margin: 0px;
 }
 
 /* Settings for the body */
 body {
-    display: block;
-    width: 100%;
-    margin: 0px;
-    background-color: var(--bkgrd);
+  display: block;
+  width: 100%;
+  margin: 0px;
+  background-color: var(--bkgrd);
 }
 
 body header {
-    display: block;
-    color: var(--me);
-    background-color: var(--toprunner);
-    height: 100px;
-    
+  display: block;
+  color: var(--me);
+  background-color: var(--toprunner);
+  height: 100px;
 }
 
 body header h1 {
-    font-size: 50px;
-    font-family: var(--content);
-    padding-left: 50px;
-    padding-top: 20px;
+  font-size: 50px;
+  font-family: var(--content);
+  padding-left: 50px;
+  padding-top: 20px;
 }
 
 /* Settings for the lego image background */
 .lego {
-    background-image: url(../images/lego_wp_light.png);
-    height: 75px;
+  background-image: url(../images/lego_wp_light.png);
+  height: 75px;
 }
 
 /* Settings for the navigation bar in the header */
 nav {
-    display: block;
-    width: 50%;
-    float: right;
-    font-size: 35px;
+  display: block;
+  width: 50%;
+  float: right;
+  font-size: 35px;
 }
 
 nav a {
-    float: left;
-    width: 25%;
-    padding-top: 20px;    text-align: center;
-    text-decoration: none;
-    color: var(--text);
+  float: left;
+  width: 25%;
+  padding-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
 }
 
 /* Settings for the family photo background */
 .family {
-    display: block;
-    background-image: url(../images/perryfamily.jpeg);
-    height: 500px;
-    background-repeat: no-repeat;
-    background-size: 100% ;
+  display: block;
+  background-image: url(../images/perryfamily.jpeg);
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 /* Settings for the about me and work content */
 .headings {
-    padding-left: 50px;
-    padding-top: 20px;
-    width: fit-content;
-    font-size: 35px;
-    font-family: var(--content);   
-    border-bottom: 2px solid;
+  padding-left: 50px;
+  padding-top: 20px;
+  width: fit-content;
+  font-size: 35px;
+  font-family: var(--content);
+  border-bottom: 2px solid;
 }
 
 .content {
-    padding-left: 40px;
-    font-family: var(--content);
-    font-size: 20px;
-    line-height: 1.5;
-    color: var(--text);
+  padding-left: 40px;
+  font-family: var(--content);
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--bkgrd);
 }
 
 /* Settings for the pictures that are also links to other project pages */
-img.one {
-    width: 600px;
-    height: 700px;
-    float: left;
-}
-
-img.two {
-    width: 1000px;
-    height: 345px;
-    padding: 0px;
+img.img-responsive {
+  width: 500px;
+  height: auto;
+  padding: 0px;
+  border: 3px solid var(--text);
 }
 
 span[proj]:hover::after {
-    content: attr(proj);
-    position: fixed;
-    left: 50px;
-    bottom: 200px;
-    min-width: 400px;
-    border: 1px #aaaaaa solid;
-    background-color: var(--text);
-    padding: 12px;
-    color: #fff;
-    font-size: 80%;
-    z-index: 1;
+  content: attr(proj);
+  position: fixed;
+  left: 50px;
+  bottom: 200px;
+  min-width: 400px;
+  border: 1px #aaaaaa solid;
+  background-color: var(--text);
+  padding: 12px;
+  color: #fff;
+  font-size: 80%;
+  z-index: 1;
 }
 
 /* Settings for the custom tooltips */
 .tooltip-inner {
-    background-color: rgb(62, 4, 121) !important;
-    color: white;
+  background-color: var(--text) !important;
+  color: white;
 }
 
 /* Settings for the footer that include links to phone, email and GitHub page */
 footer ul {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
-footer ul li{
-    margin: 45px;
-    float: left;
-    text-align: center;
-    list-style-type: none;
-    width: 25%;
+footer ul li {
+  margin: 45px;
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  width: 25%;
 }
 
 footer ul li img {
-    padding-top: 5px;
-    padding-right: 5px;
+  padding-top: 5px;
+  padding-right: 5px;
 }
 
-footer ul li a{
-    color:  var(--text);
+footer ul li a {
+  color: var(--text);
 }
 
 /* Media screen settings at 992px */
 @media screen and (max-width: 992px) {
-    nav{width: 80%};
-    nav a{font-size: 70%;}
-    img.one, img.two{width: 50%;}
-    footer ul{padding-left: 0px; text-align: center;}
-    footer ul li{margin: 15px;}   
-    footer ul li a{font-size: 85%;}
+  nav {
+    width: 80%;
+  }
+  nav a {
+    font-size: 70%;
+  }
+  img.one,
+  img.two {
+    width: 50%;
+  }
+  footer ul {
+    padding-left: 0px;
+    text-align: center;
+  }
+  footer ul li {
+    margin: 15px;
+  }
+  footer ul li a {
+    font-size: 85%;
+  }
 }
 
 /* Media screen settings at 768px */
 @media screen and (max-width: 768px) {
-    nav{width: 100%;}
-    nav a{font-size: 70%;}
-    .family{height: 300px;}
-    img.one, img.two{width: 50%;}
-    footer ul{flex-direction: column; padding: 0px;}
-    footer ul li{text-align: center; width: 100%;}   
-    footer ul li a{font-size: 100%;}
+  nav {
+    width: 100%;
+  }
+  nav a {
+    font-size: 70%;
+  }
+  .family {
+    height: 300px;
+  }
+  img.one,
+  img.two {
+    width: 50%;
+  }
+  footer ul {
+    flex-direction: column;
+    padding: 0px;
+  }
+  footer ul li {
+    text-align: center;
+    width: 100%;
+  }
+  footer ul li a {
+    font-size: 100%;
+  }
 }
 
 /* Media screen settings at 575px */
 @media screen and (max-width: 575px) {
-    body header h1{padding: 20px; text-align: center;}
-    nav{width: 100%;}   
-    nav a{font-size: 70%;}
-    .family{height: 300px;}
-    img.one, img.two{width: 50%;}
-    footer ul{flex-direction: column; padding: 0px;}
-    footer ul li{text-align: center; width: 100%;}
-    footer ul li a{font-size: 100%;}
+  body header h1 {
+    padding: 20px;
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+  }
+  nav a {
+    font-size: 70%;
+  }
+  .family {
+    height: 300px;
+  }
+  img.one,
+  img.two {
+    width: 50%;
+  }
+  footer ul {
+    flex-direction: column;
+    padding: 0px;
+  }
+  footer ul li {
+    text-align: center;
+    width: 100%;
+  }
+  footer ul li a {
+    font-size: 100%;
+  }
 }
