@@ -5,6 +5,8 @@
     --bkgrd: rgb(219, 246, 237);
     --toprunner: rgb(63,57,57);
     --content: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --bd-violet-bg: rgb(62, 4, 121);
+    --bs-white: white;
 }
 
 /* Univeral setting for the page */
@@ -110,6 +112,12 @@ span[proj]:hover::after {
     color: #fff;
     font-size: 80%;
     z-index: 1;
+}
+
+/* Settings for the custom tooltips */
+.tooltip-inner {
+    background-color: rgb(62, 4, 121) !important;
+    color: white;
 }
 
 /* Settings for the footer that include links to phone, email and GitHub page */
