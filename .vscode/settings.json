@@ -1,16 +1,10 @@
 {
-    "spellright.language": [
-        "en"
-    ],
-    "spellright.documentTypes": [
-        "markdown",
-        "latex",
-        "plaintext",
-        "Log"
-    ],
-    "spellright.parserByClass": {
-        "Log": {
-            "parser": "code"
-        }
+  "spellright.language": ["en"],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext", "Log"],
+  "spellright.parserByClass": {
+    "Log": {
+      "parser": "code"
     }
+  },
+  "liveServer.settings.port": 5501
 }
